@@ -41,3 +41,17 @@ function exibirLembretes() {
 		}
 	})
 }
+
+//Murilo
+
+function cadastrarLembrete(){
+	rl.question('Qual é o seu lembrete?' , (lembrete) => {
+		rl.question('Qual o prazo para você fazer isso?' , (prazo) => {
+			rl.question('Você ja concluiu sua tarefa?' , (concluido) =>{
+				lembretes.push({lembrete: lembrete, prazo: prazo,concluido: concluido })
+				console.log('Lembrete cadastrado!')
+				exibirLembretes()
+			})
+		})
+	})
+}
