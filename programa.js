@@ -15,4 +15,29 @@ function exibirLembretes() {
     3. Editar lembretes
     4. Marcar lembretes como concluído
     5. Sair
-	`)}
+	`)
+
+	rl.question('Escolha uma opção: ', (opcao) => {
+		switch (opcao) {
+			case '1':
+				cadastrarLembrete()
+				break
+			case '2':
+				listarLembrete()
+				break
+            case '3':
+                editarLembrete()
+                break
+            case '4':
+                marcarConcluido()
+                break
+            case '5':
+                rl.close()
+			break
+			default:
+				console.log('Opção inválida, tente novamente.')
+				exibirLembrete()
+				break
+		}
+	})
+}
