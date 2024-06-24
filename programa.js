@@ -41,3 +41,32 @@ function exibirLembretes() {
 		}
 	})
 }
+
+// Gabriel
+
+function editarLembrete() {
+    if(jogos.length == 0) {
+
+    } else {
+        rl.question('Digite o número do elemento que deseja editar: ', (numero) => {
+            if(numero > 0 && numero <= lembretes.length) {
+                rl.question('digite o novo lembrete:', (lembrete) =>{
+                rl.question('digite o novo prazo:', (prazo) =>{
+                rl.question('digite se já concluiu a tarefa:', (concluido) =>{
+                    lembretes[numero -1] = {
+                    lembrete,
+                    prazo,
+                    concluido
+                    } 
+                    console.log('editado com sucesso')
+                    exibirLembretes()
+                })
+            })
+        })
+    } else {
+        console.log('Número inválido, tente novamente')
+        exibirLem()
+    }
+})
+}
+}
