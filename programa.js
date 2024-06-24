@@ -41,3 +41,31 @@ function exibirLembretes() {
 		}
 	})
 }
+function marcarConcluido() {
+	if (lembrete.length == 0) {
+	console.log('Não há lembretes.')
+	exibirMenu()
+	} else {
+		for (let i = 0; i < lembrete.length; i++) {
+			console.log('Lista de lembretes')
+				funcionarios.forEach((lembretes, index) => {
+					console.log(`${index + 1}. ${lembretes.nome}`)
+	})
+	rl.question('Digite o lembrete que deseja remover: ', (remover) => {
+	if (remover > 0 && remover <= lembretes.length) {
+	lembretes.splice(remover - 1, 1)
+	console.log('Lembrete removido com sucesso!')
+	exibirMenu()
+	} else {
+	console.log('Opção Inválida, digite novamente')
+	exibirMenu()
+	}
+	})
+	}
+	}
+}
+
+
+
+
+
