@@ -45,7 +45,7 @@ function exibirLembretes() {
 // Gabriel lazarini
 
 function editarLembrete() {
-    if(jogos.length == 0) {
+    if(lembretes.length == 0) {
 
     } else {
         rl.question('Digite o número do elemento que deseja editar: ', (numero) => {
@@ -65,7 +65,7 @@ function editarLembrete() {
         })
     } else {
         console.log('Número inválido, tente novamente')
-        exibirLem()
+        exibirLembretes()
     }
 })
 }
