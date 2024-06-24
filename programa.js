@@ -42,7 +42,7 @@ function exibirLembretes() {
 	})
 }
 
-// Gabriel
+// Gabriel lazarini
 
 function editarLembrete() {
     if(jogos.length == 0) {
